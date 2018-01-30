@@ -14,8 +14,13 @@ $nm-font--stencil: "Gunplay", sans-serif;
 // COLORS
 $nm-black :  #000;
 $nm-blackish: hsl(222, 9%, 14%);
-$nm-blue :   hsl(219, 54%, 18%);
+
 $nm-green :  hsl(83, 49%, 49%);
 $nm-orange: hsl(38, 90%, 55%);
-$nm-yellow: hsl(52, 79%, 56%);
+
 $nm-white :  #fff;
+
+
+$nm-blue: hsl(207, 100%, 40%);
+$nm-blue--dark : hsl(207, 70%, 15%);
+$nm-yellow: hsl(46, 76%, 72%);

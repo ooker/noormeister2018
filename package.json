@@ -1,7 +1,7 @@
 {
-  "name": "noormeister-2017",
+  "name": "noormeister-2018",
   "version": "1.0.0",
-  "description": "WP theme for Noor Meister event",
+  "description": "WP theme for Noor Meister 2018 event",
   "main": "gulpfile.js",
   "dependencies": {
     

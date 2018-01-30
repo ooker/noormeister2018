@@ -19,9 +19,9 @@
 			xmlns:nmdata="http://www.nooreister.ee">
 
 					<?php if ( is_front_page() ): ?>
-						<path d="M0,0 H100 V100 H0" style="fill:hsl(83, 49%, 49%);"></path>
-						<path nmdata:axis="x" nmdata:startpos="100" nmdata:duration="240" nmdata:p1end="43" nmdata:p2end="50"	class="nm-svgBg" d="" style="fill:hsla(83, 0%, 0%, 0.1);"></path>
-						<path nmdata:axis="y" nmdata:startpos="100" nmdata:duration="200" nmdata:p1end="62" nmdata:p2end="85"	class="nm-svgBg" d="" style="fill:hsla(66, 100%, 65%, 0.3);"></path>
+						<path d="M0,0 H100 V100 H0" style="fill:hsl(207, 100%, 40%);"></path>
+						<path nmdata:axis="x" nmdata:startpos="100" nmdata:duration="240" nmdata:p1end="43" nmdata:p2end="50"	class="nm-svgBg" d="" style="fill:hsla(0, 0%, 100%, 0.1);"></path>
+						<path nmdata:axis="y" nmdata:startpos="100" nmdata:duration="200" nmdata:p1end="62" nmdata:p2end="85"	class="nm-svgBg" d="" style="fill:hsla(0, 0%, 0%, 0.1);"></path>
 
 					<?php elseif( is_page('kava') ): ?>
 						<path class="nm-svgBg" d="" style="fill:hsla(83, 49%, 49%, 0.85);"
@@ -101,7 +101,7 @@
 			<section class="nm-fpIntro">
 
 			<div class="nm-fpIntro__logo">
-				<img src="<?php echo get_template_directory_uri(); ?>/images/nm-logo-2017.svg" alt="Noor Meister 2017" />
+				<img src="<?php echo get_template_directory_uri(); ?>/images/nm-logo-2018_neg.svg" alt="Noor Meister 2018 - oskuste festival" />
 			</div>
 
 			<div class="nm-fpIntro__texts">
