@@ -139,6 +139,20 @@ function getModalContent(type, id, index) {
   } );
 }
 
+function initScrollButtons(){
+  $(".nm-scrollBtn").on('click',  function(e) {
+    var id = $(this).attr('href');
+    var $id = $(id);
+    if ($id.length === 0) {
+        return;
+    }
+    e.preventDefault();
+
+    var pos = $id.offset().top;
+    $('body, html').animate({scrollTop: pos}, 1000);
+  });
+}
+
 $(document).ready(function() {
 
   initMediaQueryChanges();
@@ -146,6 +160,7 @@ $(document).ready(function() {
   initResponsiveNav();
   animateBackground();
   initOwlCarousel();
+  initScrollButtons();
 });
 
 
@@ -163,8 +178,12 @@ function animateBackground() {
     smwBgPaths[i].startP = parseInt(el.getAttribute("nmdata:startpos"));
     smwBgPaths[i].endP1 = parseInt(el.getAttribute("nmdata:p1end"));
     smwBgPaths[i].endP2 = parseInt(el.getAttribute("nmdata:p2end"));
+    smwBgPaths[i].shiftP1 = parseInt(el.getAttribute("nmdata:p1shift"));
+    smwBgPaths[i].shiftP2 = parseInt(el.getAttribute("nmdata:p2shift"));
     smwBgPaths[i].duration = parseInt(el.getAttribute("nmdata:duration"));
     smwBgPaths[i].axis = el.getAttribute("nmdata:axis");
+
+
 
     setTimeout(function(){
       if(smwBgPaths[i].axis == "y"){
@@ -172,18 +191,23 @@ function animateBackground() {
       } else {
         smwBgAnimX(smwBgPaths[i]);
       }
+      //smwBgAnimXY(smwBgPaths[i]);
     }, 400);
   });
+  //console.table(smwBgPaths);
 }
 
-function smwBgAnimY(obj, axis) {
+
+function smwBgAnimY(obj) {
   var t = obj.frame / obj.duration;
   t = easeOutQuad(t);
   var valRight = obj.startP + t * (obj.endP2 - obj.startP);
   var valLeft = obj.startP + t * (obj.endP1 - obj.startP);
+  var shiftRight = 100+obj.shiftP2;
+  var shiftLeft = obj.shiftP1;
   obj.frame++;
 
-  obj.el.setAttribute("d", "M0,100 H100 V" + valRight + " L0," + valLeft + "");
+  obj.el.setAttribute("d", "M0,"+obj.startP+" H100 L"+shiftRight+","+valRight+" L"+shiftLeft+","+valLeft+"");
 
   if (Math.abs(valRight) == obj.endP2) {
     cancelAnimationFrame(function () {
@@ -215,6 +239,9 @@ function smwBgAnimX(obj) {
     });
   }
 }
+
+
+
 
 /*
  easings - thanks to Josh Marinacci & Robert Penner

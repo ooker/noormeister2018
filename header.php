@@ -16,12 +16,30 @@
 
 		<div class="nm-pageBg">
 			<svg class="nm-pageBg__svg" viewBox="0 0 100 100" preserveAspectRatio="none"
-			xmlns:nmdata="http://www.nooreister.ee">
+			xmlns:nmdata="http://www.noormeister.ee">
 
 					<?php if ( is_front_page() ): ?>
 						<path d="M0,0 H100 V100 H0" style="fill:hsl(207, 100%, 40%);"></path>
-						<path nmdata:axis="x" nmdata:startpos="100" nmdata:duration="240" nmdata:p1end="43" nmdata:p2end="50"	class="nm-svgBg" d="" style="fill:hsla(0, 0%, 100%, 0.1);"></path>
-						<path nmdata:axis="y" nmdata:startpos="100" nmdata:duration="200" nmdata:p1end="62" nmdata:p2end="85"	class="nm-svgBg" d="" style="fill:hsla(0, 0%, 0%, 0.1);"></path>
+						<path nmdata:axis="y" 
+							nmdata:startpos="0" 
+							nmdata:duration="160" 
+							nmdata:p1end="30" 
+							nmdata:p2end="20"
+							nmdata:p1shift="0"
+							nmdata:p2shift="0" 
+							class="nm-svgBg" 
+							d="" 
+							style="fill:hsla(207, 100%, 50%, 1);"></path>
+						<path nmdata:axis="y" 
+							nmdata:startpos="100" 
+							nmdata:duration="140" 
+							nmdata:p1end="88" 
+							nmdata:p2end="80"
+							nmdata:p1shift="0"
+							nmdata:p2shift="-15" 
+							class="nm-svgBg" 
+							d="" 
+							style="fill:hsla(207, 100%, 32%, 1);"></path>
 
 					<?php elseif( is_page('kava') ): ?>
 						<path class="nm-svgBg" d="" style="fill:hsla(83, 49%, 49%, 0.85);"
@@ -88,17 +106,17 @@
 
 		<a class="nm-navSwapper" href="#">
 			<svg viewBox="0 0 56 48">
-        <g fill="#ffffff">
-          <rect x="0" y="0" width="56" height="10"></rect>
-          <rect x="0" y="19" width="56" height="10"></rect>
-          <rect x="0" y="38" width="56" height="10"></rect>
-        </g>
-      </svg>
+        		<g fill="#ffffff">
+          			<rect x="0" y="0" width="56" height="10"></rect>
+          			<rect x="0" y="19" width="56" height="10"></rect>
+          			<rect x="0" y="38" width="56" height="10"></rect>
+        		</g>
+      		</svg>
 		</a>
 
 		<?php if (is_front_page()): ?>
 
-			<section class="nm-fpIntro">
+		<section class="nm-fpIntro">
 
 			<div class="nm-fpIntro__logo">
 				<img src="<?php echo get_template_directory_uri(); ?>/images/nm-logo-2018_neg.svg" alt="Noor Meister 2018 - oskuste festival" />
@@ -107,35 +125,58 @@
 			<div class="nm-fpIntro__texts">
 				<div class="nm-fpIntro__when">
 					<h2>4.-5. mail Tallinnas</h2>
-					<h5>Eesti Näituste messikeskuses</h5>
+					<h4>Eesti Näituste messikeskuses</h4>
 					<h3>SISSEPÄÄS TASUTA!</h3>
+					<a href="#nm-fpInfo" class="nm-scrollBtn btn btn-primary btn-lg nm-fpIntro__btn">Mis toimub?</a>
 				</div>
 
 				<hr style="width: 100%"/>
 
-				<div class="nm-fpIntro__what">
-					<h2>Mis toimub?</h2>
-					<h5><b>KUTSE&shy;MEISTRI&shy;VÕISTLUSED:</b><br />31 eriala ja ligi 400 võistlejat</h5>
-					<h5><b>KUTSEHARIDUSMESS:</b><br />kõik oluline kutseharidusest ja <b>põnevad töötoad</b></h5>
-					<h5>Huvitav <b>LAVAPROGRAMM</b></h5>
-					<h5><b>Esineb Karl-Erik Taukar Band</b></h5>
-					<hr style="width: 100%"/>
-					<a href="/kava" class="btn btn-primary btn-lg nm-fpIntro__btn">VAATA JÄRGI</a>
-				</div>
+				<div class="nm-fpIntro__logos">
+					
+					<div class="nm-fpIntro__esf">
+						<img class="nm-fpIntro__esf--hor"
+							src="<?php echo get_template_directory_uri(); ?>/images/logo/esf_logo.svg" />
+					</div>
 
+					<div class="nm-fpIntro__ev100">
+						<img 
+							src="<?php echo get_template_directory_uri(); ?>/images/logo/ev100_logo_white.svg" />
+					</div>
+					
+				</div>
 			</div>
 
 			<?php include_once( dirname(__FILE__) . '/inc/social.php'); ?>
-
-			<div class="nm-fpIntro__esf">
-				<img class="nm-fpIntro__esf--hor"
-					src="<?php echo get_template_directory_uri(); ?>/images/logo/esf_logo.svg" />
-				<!--<img class="nm-fpIntro__esf--ver"
-					src="<?php //echo get_template_directory_uri(); ?>/images/logo/esf_logo_ver.svg" />-->
-			</div>
-
 		</section>
-
+		
+		
+		<section class="container-fluid nm-fpInfo" id="nm-fpInfo">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-4 nm-fpInfo__block">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/elements/icons/material-grain.svg" alt="">
+						<h4>KUTSE&shy;MEISTRI&shy;VÕISTLUSED</h4>
+						<h5>31 eriala ja ligi 400 võistlejat</h5>
+					</div>
+					<div class="col-sm-12 col-md-4 nm-fpInfo__block">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/elements/icons/material-blur.svg" alt="">
+						<h4>KUTSEHARIDUS&shy;MESS</h4>
+						<h5>kõik oluline kutseharidusest ja põnevad töötoad</h5>
+					</div>
+					<div class="col-sm-12 col-md-4 nm-fpInfo__block">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/elements/icons/material-star-border.svg" alt="">
+						<h4>LAVAPROGRAMM</h4>
+						<h5>Esineb Karl-Erik Taukar Band</h5>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 nm-fpInfo__btn">
+						<a href="/kava" class="btn btn-primary btn-lg nm-fpIntro__btn">Tutvu kavaga</a>
+					</div>
+				</div>
+			</div>
+		</section>
 
 
 		<?php endif ?>
