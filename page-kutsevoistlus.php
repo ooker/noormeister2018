@@ -6,7 +6,7 @@ Template Post Type: page, kutsevoistlus
 ?>
 
 <?php get_header() ?>
-
+<?php include_once( dirname(__FILE__) . '/inc/modal.php'); ?>
 		<div class="container nm-pageContent">
 			<section class="row" role="main">
 				<div class="col-sm-12">
@@ -40,6 +40,8 @@ Template Post Type: page, kutsevoistlus
 			</section>
 		</div><!-- /.container -->
 
+
+		
 <?php get_footer() ?>
 
-<?php include_once( dirname(__FILE__) . '/inc/modal.php'); ?>
+

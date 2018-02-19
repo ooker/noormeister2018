@@ -36,7 +36,13 @@
     }
   }
 }
-.nm-modalBody {}
+.nm-modalBody {
+  img {
+    width: 100%;
+    height: auto;
+    
+  }
+}
 .nm-modalFooter {}
 
 .nm-modal__btnNav {

@@ -1,5 +1,5 @@
 <div class="nm-social">
-  <a class="nm-social__icon" href="https://www.facebook.com/events/1558541140822783/" target="_blank">
+  <a class="nm-social__icon" href="https://www.facebook.com/events/143011403040044/" target="_blank">
     <img src="<?php echo get_template_directory_uri();?>/images/logo/social/ico-fb.svg" alt="Facebook" />
   </a>
 

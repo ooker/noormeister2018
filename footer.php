@@ -1,26 +1,19 @@
 		</section><!-- /.nm-mainContent-->
 
 		<!-- Sponsorite logod -->
-		<section class="container-fluid nm-footer__logobar">
+		<!-- <section class="container-fluid nm-footer__logobar">
 
 			<div id="carousel_container" class="owl-carousel" >
 				<?php
 
-				$args = array( 'post_type' => 'toetaja', 'posts_per_page' => -1 );
-				$loop = new WP_Query( $args );
-				while ( $loop->have_posts() ) : $loop->the_post();
-						echo '<img class="item" src="' . get_the_post_thumbnail_url() . '" alt="'. get_the_title() .'">';
-				endwhile;
-
-					/*$handle = opendir(dirname(realpath(__FILE__)).'/logos/');
-					while($file = readdir($handle)){
-						if($file !== '.' && $file !== '..'){
-							echo '<img class="item" src="'.get_template_directory_uri().'/logos/'.$file.'" alt="" />';
-						}
-					}*/
+				// $args = array( 'post_type' => 'toetaja', 'posts_per_page' => -1 );
+				// $loop = new WP_Query( $args );
+				// while ( $loop->have_posts() ) : $loop->the_post();
+				// 		echo '<img class="item" src="' . get_the_post_thumbnail_url() . '" alt="'. get_the_title() .'">';
+				// endwhile;
 				?>
 			</div>
-		</section>
+		</section> -->
 
 
 		<!-- FOOTER -->
