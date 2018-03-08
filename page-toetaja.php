@@ -19,42 +19,29 @@ Template Post Type: page, toetaja
 						<div class="entry-content">
 							<?php the_content() ?>
 						</div><!-- .entry-content -->
-					</div><!-- #post-## -->
-					<?php endwhile; // end of the loop. ?>
+					</div>
+					<?php endwhile; ?>
 
+          <!--
 					<h3>Suursponsorid:</h3>
 
 					<div class="nm-supporters">
         	<?php
-						$args = array(
-							'posts_per_page' => -1,
-							'post_type' => 'toetaja',
-							'category_name' => 'toetaja-suursponsor',
-							'orderby' => 'title',
-							'order' => 'ASC'
-							/*
-							'meta_query'	=> array(
-								'relation'		=> 'OR',
-								array(
-									'key'		=> 'Toetaja_kategooria',
-									'value'		=> '0',
-									'compare'	=> 'LIKE'
-								),
-								array(
-									'key'		=> 'Toetaja_kategooria',
-									'value'		=> 'Sydney',
-									'compare'	=> 'LIKE'
-								)
-							)*/
-						);
-            $loop = new WP_Query( $args );
-            while ( $loop->have_posts() ) : $loop->the_post();
-                echo '<a href="' . get_post_meta(get_the_ID(), 'Toetaja_URL', true) . '" class="nm-card nm-supporter" target="_blank">';
-                echo '<div class="nm-supporter__img"><img src="' . get_the_post_thumbnail_url() . '"></div>';
-                echo '<hr>';
-                echo '<div class="nm-supporter__text">' . get_the_title() . '</div>';
-              echo '</a>';
-            endwhile;
+						// $args = array(
+						// 	'posts_per_page' => -1,
+						// 	'post_type' => 'toetaja',
+						// 	'category_name' => 'toetaja-suursponsor',
+						// 	'orderby' => 'title',
+						// 	'order' => 'ASC'
+						// );
+            // $loop = new WP_Query( $args );
+            // while ( $loop->have_posts() ) : $loop->the_post();
+            //     echo '<a href="' . get_post_meta(get_the_ID(), 'Toetaja_URL', true) . '" class="nm-card nm-supporter" target="_blank">';
+            //     echo '<div class="nm-supporter__img"><img src="' . get_the_post_thumbnail_url() . '"></div>';
+            //     echo '<hr>';
+            //     echo '<div class="nm-supporter__text">' . get_the_title() . '</div>';
+            //   echo '</a>';
+            // endwhile;
 
             ?>
 
@@ -64,21 +51,21 @@ Template Post Type: page, toetaja
 
 					<div class="nm-supporters">
         	<?php
-						$args = array(
-							'posts_per_page' => -1,
-							'post_type' => 'toetaja',
-							'category_name' => 'toetaja-sponsor',
-							'orderby' => 'title',
-							'order' => 'ASC'
-						);
-            $loop = new WP_Query( $args );
-            while ( $loop->have_posts() ) : $loop->the_post();
-                echo '<a href="' . get_post_meta(get_the_ID(), 'Toetaja_URL', true) . '" class="nm-card nm-supporter" target="_blank">';
-                echo '<div class="nm-supporter__img"><img src="' . get_the_post_thumbnail_url() . '"></div>';
-                echo '<hr>';
-                echo '<div class="nm-supporter__text">' . get_the_title() . '</div>';
-              echo '</a>';
-            endwhile;
+						// $args = array(
+						// 	'posts_per_page' => -1,
+						// 	'post_type' => 'toetaja',
+						// 	'category_name' => 'toetaja-sponsor',
+						// 	'orderby' => 'title',
+						// 	'order' => 'ASC'
+						// );
+            // $loop = new WP_Query( $args );
+            // while ( $loop->have_posts() ) : $loop->the_post();
+            //     echo '<a href="' . get_post_meta(get_the_ID(), 'Toetaja_URL', true) . '" class="nm-card nm-supporter" target="_blank">';
+            //     echo '<div class="nm-supporter__img"><img src="' . get_the_post_thumbnail_url() . '"></div>';
+            //     echo '<hr>';
+            //     echo '<div class="nm-supporter__text">' . get_the_title() . '</div>';
+            //   echo '</a>';
+            // endwhile;
 
             ?>
 
@@ -88,24 +75,24 @@ Template Post Type: page, toetaja
 
 					<div class="nm-supporters">
         	<?php
-						$args = array(
-							'posts_per_page' => -1, 
-							'post_type' => 'toetaja',
-							'category_name' => 'toetaja-koostoopartner',
-							'orderby' => 'title',
-							'order' => 'ASC'
-						);
-            $loop = new WP_Query( $args );
-            while ( $loop->have_posts() ) : $loop->the_post();
-                echo '<a href="' . get_post_meta(get_the_ID(), 'Toetaja_URL', true) . '" class="nm-card nm-supporter" target="_blank">';
-                echo '<div class="nm-supporter__img"><img src="' . get_the_post_thumbnail_url() . '"></div>';
-                echo '<hr>';
-                echo '<div class="nm-supporter__text">' . get_the_title() . '</div>';
-              echo '</a>';
-            endwhile;
+						// $args = array(
+						// 	'posts_per_page' => -1, 
+						// 	'post_type' => 'toetaja',
+						// 	'category_name' => 'toetaja-koostoopartner',
+						// 	'orderby' => 'title',
+						// 	'order' => 'ASC'
+						// );
+            // $loop = new WP_Query( $args );
+            // while ( $loop->have_posts() ) : $loop->the_post();
+            //     echo '<a href="' . get_post_meta(get_the_ID(), 'Toetaja_URL', true) . '" class="nm-card nm-supporter" target="_blank">';
+            //     echo '<div class="nm-supporter__img"><img src="' . get_the_post_thumbnail_url() . '"></div>';
+            //     echo '<hr>';
+            //     echo '<div class="nm-supporter__text">' . get_the_title() . '</div>';
+            //   echo '</a>';
+            // endwhile;
 
             ?>
-
+            -->
 					</div>
 
 				</div>

@@ -54,7 +54,7 @@
   &:hover {
     //z-index: 200;
     //box-shadow: 0 0 0 40px $nm-yellow;
-    box-shadow: 0 0 0 6px $nm-white, 0 0 0 18px $nm-black, 0 0 0 36px $nm-blue;
+    box-shadow: 0 0 0 6px $nm-white, 0 0 0 12px $nm-blue--dark, 0 0 0 36px $nm-blue;
     z-index: 1040;
     img {
 
@@ -94,6 +94,9 @@
     flex: 1 0 100%;
     //padding: 4vh 3vw 1vh 4vw;
   }
+  .two_third {
+    flex: 1 0 100%;
+  }
 }
 
 
@@ -126,10 +129,17 @@
         padding: 0 0 0 1.5vmin;
       }
     }
+    .two_third {
+      flex: 1 0 62%;
+      padding: 0 1.5vmin 0 0;
+      &.last_column {
+        padding: 0 0 0 1.5vmin;
+      }
+    }
   }
 
   #wpgmza_map {
-    border: 10px solid darken($nm-green, 5%);
+    border: 10px solid darken($nm-blue, 5%);
   }
 
 }

@@ -7,7 +7,7 @@
     <img src="<?php echo get_template_directory_uri();?>/images/logo/social/ico-yt.svg" alt="Youtube" />
   </a>
 
-  <a class="nm-social__icon" href="https://www.instagram.com/noormeister/" target="_blank">
+  <a class="nm-social__icon" href="https://www.instagram.com/oskustegatulevikku/" target="_blank">
     <img src="<?php echo get_template_directory_uri();?>/images/logo/social/ico-ig.svg" alt="Instagram" />
   </a>
 

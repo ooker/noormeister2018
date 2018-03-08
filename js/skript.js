@@ -105,8 +105,8 @@ function initOwlCarousel(){
 }
 
 function getModalContent(type, id, index) {
-  var postUrl = "http://localhost/nm18/wp-json/wp/v2/"+type+"/"+id;
-  //var postUrl = "http://noormeister.ee/wp-json/wp/v2/"+type+"/"+id;
+  // var postUrl = "http://localhost/nm18/wp-json/wp/v2/"+type+"/"+id;
+  var postUrl = "http://noormeister.ee/wp-json/wp/v2/"+type+"/"+id;
   $.ajax( {
     url: postUrl,
     //contentType: "application/json;charset=utf-8",

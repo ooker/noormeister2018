@@ -138,7 +138,7 @@ function hide_column_shortcodes( $shortcodes ) {
     //unset( $shortcodes['one_half'] );
     //unset( $shortcodes['one_third'] );
     unset( $shortcodes['one_fourth'] );
-    unset( $shortcodes['two_third'] );
+    //unset( $shortcodes['two_third'] );
     unset( $shortcodes['three_fourth'] );
     unset( $shortcodes['one_fifth'] );
     unset( $shortcodes['two_fifth'] );
