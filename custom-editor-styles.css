@@ -1,0 +1,27 @@
+
+.nm-columnsContainer {
+  
+  box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.3);
+  margin-bottom: 6vh;
+  padding: 5vmin;
+  background: #fff; }
+
+
+
+.nm-fancyHeading {
+  position: relative;
+  font-family: "Gunplay", sans-serif;
+  font-weight: 400;
+  padding-left: 36px; }
+  .nm-fancyHeading:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 5px;
+    width: 10px;
+    height: 100%;
+    background: #ffda61;
+    margin: 6px 0;
+    vertical-align: baseline; }
+

@@ -6,15 +6,6 @@ function register_my_menus() {
 }
 add_action( 'init', 'register_my_menus' );
 
-/*
-register_sidebar(array(
-    'name' => 'Footer',
-    'before_widget' => '<li>',
-    'after_widget' => '</li>',
-    'before_title' => '<h6>',
-    'after_title' => '</h6>',
-));
-*/
 
 
 function register_styles(){
@@ -88,11 +79,11 @@ add_action('init', 'register_scripts');
 
 
 register_sidebar(array(
-    'name' => 'Uudiste arhiiv',
-    'before_widget' => '<div>',
-    'after_widget' => '</div>',
-    'before_title' => '<h5>',
-    'after_title' => '</h5>',
+  'name' => 'Uudiste arhiiv',
+  'before_widget' => '<div>',
+  'after_widget' => '</div>',
+  'before_title' => '<h5>',
+  'after_title' => '</h5>',
 ));
 
 $defaults = array(
@@ -113,7 +104,6 @@ add_theme_support( 'custom-header', $defaults );
 
 
 // Register widgetized areas
-
 function theme_widgets_init() {
   // Area 1
   register_sidebar( array (
@@ -121,13 +111,13 @@ function theme_widgets_init() {
     'id' => 'logo_widget_area',
   ) );
 } // end theme_widgets_init
-
 add_action( 'init', 'theme_widgets_init' );
-
 add_theme_support( 'post-thumbnails' );
 
+
+
 /*
-  Setting up Column shortcodes plugin for nm17 theme
+  Setting up Column shortcodes plugin for nm18 theme
 */
 // hiding custom padding
 add_filter( 'cpsh_hide_padding_settings', '__return_true' );
@@ -155,7 +145,7 @@ add_filter( 'cpsh_load_styles', '__return_false' );
 
 
 /*
-  Trying to enable SVG upload:
+  SVG upload:
   https://css-tricks.com/snippets/wordpress/allow-svg-through-wordpress-media-uploader/
   fixes the mime type, possible to submit, but shows error message in WP 4.7.1
   waiting for fix
@@ -166,13 +156,14 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
+
 /* emojis have to go away */
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
 
+
+
 // Show posts of 'post', and 'news' post types on archive page
-
-
 function add_my_post_types_to_query( $query ) {
   if ( is_archive() && $query->is_main_query() ){
     $query->set( 'post_type', array( 'uudis' ) );
@@ -180,6 +171,9 @@ function add_my_post_types_to_query( $query ) {
   }
 }
 add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
+
+
+
 
 
 /* Custom classes to editor */
@@ -224,6 +218,12 @@ function my_mce_before_init_insert_formats( $init_array ) {
 			'classes' => 'nm-fancyHeading',
 			'wrapper' => false,
 		),
+		array(
+			'title' => 'Lehe sisu valge taust',
+			'block' => 'div',
+			'classes' => 'nm-columnsContainer',
+			'wrapper' => true,
+		),
 	);
 	// Insert the array, JSON ENCODED, into 'style_formats'
 	$init_array['style_formats'] = json_encode( $style_formats );
@@ -233,7 +233,11 @@ function my_mce_before_init_insert_formats( $init_array ) {
 // Attach callback to 'tiny_mce_before_init'
 add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
 
-
+// Showing custom styles in editor
+function my_theme_add_editor_styles() {
+	add_editor_style( 'custom-editor-styles.css' );
+}
+add_action( 'init', 'my_theme_add_editor_styles' );
 
 
 /* prev/next buttons */
@@ -260,89 +264,5 @@ add_filter( 'json_prepare_post', 'get_pagination_in_json', 10, 3 );
 */
 
 
-/*
-function nm_custom_post_rewrite( $rewrite_rules ) {
-  $cpslug = 'uudis'; // custom post type slug
-  // Rule to display monthly archive -> contest_recipe/2012/08/
-  $year_archive = array( $cpslug . '/([0-9]{4})/([0-9]{1,2})/?$' => 'index.php?year=$matches[1]&monthnum=$matches[2]&post_type=' . $cpslug );
-  // Rule to display yearly archive -> contest_recipe/2012/
-  $month_archive = array( $cpslug . '/([0-9]{4})/?$' => 'index.php?year=$matches[1]&post_type=' . $cpslug );
-  $rewrite_rules = $year_archive + $month_archive + $rewrite_rules;
-  return $rewrite_rules;
-}
-add_filter('rewrite_rules_array', 'nm_custom_post_rewrite');
-*/
-/*
-if ( ! function_exists('tootuba_post_type') ) {
-
-// Register Custom Post Type
-function tootuba_post_type() {
-
-	$labels = array(
-		'name'                  => _x( 'Töötoad', 'Post Type General Name', 'text_domain' ),
-		'singular_name'         => _x( 'Töötuba', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'Töötoad', 'text_domain' ),
-		'name_admin_bar'        => __( 'Töötuba', 'text_domain' ),
-		'archives'              => __( 'Item Archives', 'text_domain' ),
-		'attributes'            => __( 'Item Attributes', 'text_domain' ),
-		'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
-		'all_items'             => __( 'All Items', 'text_domain' ),
-		'add_new_item'          => __( 'Add New Item', 'text_domain' ),
-		'add_new'               => __( 'Add New', 'text_domain' ),
-		'new_item'              => __( 'New Item', 'text_domain' ),
-		'edit_item'             => __( 'Edit Item', 'text_domain' ),
-		'update_item'           => __( 'Update Item', 'text_domain' ),
-		'view_item'             => __( 'View Item', 'text_domain' ),
-		'view_items'            => __( 'View Items', 'text_domain' ),
-		'search_items'          => __( 'Search Item', 'text_domain' ),
-		'not_found'             => __( 'Not found', 'text_domain' ),
-		'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
-		'featured_image'        => __( 'Featured Image', 'text_domain' ),
-		'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
-		'remove_featured_image' => __( 'Remove featured image', 'text_domain' ),
-		'use_featured_image'    => __( 'Use as featured image', 'text_domain' ),
-		'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
-		'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
-		'items_list'            => __( 'Items list', 'text_domain' ),
-		'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
-		'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
-	);
-	$capabilities = array(
-		'edit_post'             => 'edit_post',
-		'read_post'             => 'read_post',
-		'delete_post'           => 'delete_post',
-		'edit_posts'            => 'edit_posts',
-		'edit_others_posts'     => 'edit_others_posts',
-		'publish_posts'         => 'publish_posts',
-		'read_private_posts'    => 'read_private_posts',
-	);
-	$args = array(
-		'label'                 => __( 'Töötuba', 'text_domain' ),
-		'description'           => __( 'Töötubade info', 'text_domain' ),
-		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom-fields', 'page-attributes', 'post-formats' ),
-		'hierarchical'          => false,
-		'public'                => true,
-		'show_ui'               => true,
-		'show_in_menu'          => true,
-		'menu_position'         => 5,
-		'menu_icon'             => 'dashicons-admin-tools',
-		'show_in_admin_bar'     => false,
-		'show_in_nav_menus'     => true,
-		'can_export'            => true,
-		'has_archive'           => true,
-		'exclude_from_search'   => false,
-		'publicly_queryable'    => true,
-		'rewrite'               => true,
-		'capabilities'          => $capabilities,
-		'show_in_rest'          => true,
-	);
-	register_post_type( 'tootuba', $args );
-
-}
-add_action( 'init', 'tootuba_post_type', 0 );
-
-}
-*/
 
 ?>
