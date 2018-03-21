@@ -324,8 +324,8 @@ h1, h2, h3, h4, h5 {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  -ms-flex-pack: start;
-      justify-content: flex-start;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   -ms-flex-align: center;
       align-items: center;
   text-align: center; }
@@ -343,11 +343,9 @@ h1, h2, h3, h4, h5 {
     color: #c2def4; }
 
 .nm-fpInfo__btn {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  padding-top: 6vh; }
+  margin: 3vh auto 5vh auto; }
+  .nm-fpInfo__btn:hover {
+    background: #0b2941; }
 
 @media screen and (min-width: 992px) {
   .nm-navSwapper {

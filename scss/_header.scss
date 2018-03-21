@@ -343,7 +343,7 @@
 .nm-fpInfo__block {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   // min-height: 40vh;
   text-align: center;
@@ -365,9 +365,13 @@
 }
 
 .nm-fpInfo__btn {
-  display: flex;
-  justify-content: center;
-  padding-top: 6vh;
+  // display: flex;
+  // justify-content: center;
+  // padding-top: 6vh;
+  margin: 3vh auto 5vh auto;
+  &:hover {
+    background: $nm-blue--dark;
+  }
 }
 
 

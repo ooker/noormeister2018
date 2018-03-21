@@ -240,24 +240,27 @@
 						<img src="<?php echo get_template_directory_uri(); ?>/images/elements/icons/material-grain.svg" alt="">
 						<h4>KUTSE&shy;MEISTRI&shy;VÕISTLUSED</h4>
 						<h5>Eesti kutsemeistrivõistlused 31&nbsp;erialal ligi 300&nbsp;võistlejaga</h5>
+						<a href="<?php echo get_site_url(); ?>/kutsevoistlused" class="btn btn-primary nm-fpInfo__btn">VAATA</a>
 					</div>
 					<div class="col-sm-12 col-md-4 nm-fpInfo__block">
 						<img src="<?php echo get_template_directory_uri(); ?>/images/elements/icons/material-blur.svg" alt="">
 						<h4>OSKUSTE FESTIVAL</h4>
 						<h5>Põnevad töötoad, õpilasfirmad ja edukad praktikud</h5>
+						<a href="<?php echo get_site_url(); ?>/oskuste-festival" class="btn btn-primary nm-fpInfo__btn">VAATA</a>
 					</div>
 					<div class="col-sm-12 col-md-4 nm-fpInfo__block">
 						<img src="<?php echo get_template_directory_uri(); ?>/images/elements/icons/material-star-border.svg" alt="">
 						<h4>LAVAPROGRAMM</h4>
 						<h5>Kahepäevane meeleolukas lavaprogramm</h5>
+						<a href="<?php echo get_site_url(); ?>/kava" class="btn btn-primary nm-fpInfo__btn">TUTVU</a>
 					</div>
 				</div>
-				<div class="row">
+				<!-- <div class="row">
 					<div class="col-sm-12 nm-fpInfo__btn">
 						<h3 style="color:#fff;">Lisainfo peagi tulekul!</h3>
-						<!-- <a href="<?php echo get_site_url(); ?>/kava" class="btn btn-primary btn-lg nm-fpIntro__btn">Tutvu kavaga</a> -->
+						<a href="<?php echo get_site_url(); ?>/kava" class="btn btn-primary btn-lg nm-fpIntro__btn">Tutvu kavaga</a>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</section>
 
