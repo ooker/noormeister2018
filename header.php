@@ -1,12 +1,10 @@
 <!doctype html>
-<html>
+<html lang="et">
 	<head>
 		<meta charset="utf-8" />
 		<title><?php bloginfo('name');?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="google-site-verification" content="77raGIaSvZucOR4VaSrXlTJI1341fzonVVUCQx8KtWI" />
-		<link rel="sitemap" href="sitemap.xml" type="application/xml" />
-		<link rel="shortcut icon" href="/favicon.ico" />
 
 		<?php wp_head(); ?>
 	</head>

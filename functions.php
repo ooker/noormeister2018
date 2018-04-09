@@ -30,14 +30,14 @@ add_action( 'wp_enqueue_scripts', 'register_styles' );
 
 function register_scripts() {
   if (!is_admin()){
-    wp_deregister_script('jquery');
+    //wp_deregister_script('jquery');
     $scripts = array(
-      'jquery' => array(
+      /*'jquery' => array(
       'url' => get_template_directory_uri().'/js/jquery-3.1.1.min.js',
       'dependencies' => false,
       'version' => '3.1.1',
       'in_footer' => true
-    ),
+    ),*/
     'tether' => array(
     	'url' => 'https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js',
     	'dependencies' => false,
@@ -58,8 +58,9 @@ function register_scripts() {
     ),
     'main' => array(
     	'url' => get_template_directory_uri().'/js/skript.js',
-    	'dependencies' => array('jquery', 'bootstrap', 'owlcarousel'),
-    	'version' => '0.1',
+      //'dependencies' => array('jquery', 'bootstrap', 'owlcarousel'),
+      'dependencies' => array('bootstrap', 'owlcarousel'),
+    	'version' => '0.11',
     	'in_footer' => true
     )
   );

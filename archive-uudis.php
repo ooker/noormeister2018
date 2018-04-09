@@ -19,10 +19,10 @@
 								echo '<div class="entry-content nm-newsArchive__item">';
 									echo '<div style="margin-bottom: 12px; text-align: right;"><i>' . get_the_date( "d.m.Y", $recent["ID"] ) . '</i></div>';
 									echo '<h3 class="nm-fancyHeading">'. get_the_title() . '</h3>';
-									echo '<div>'
-											. wpautop( $post->post_content ) .
-									'</div>';
-									//the_content();
+									// echo '<div>'
+									// 		. wpautop( $post->post_content ) .
+									// '</div>';
+									the_content();
 								echo '</div><hr class="nm-newsDivider" />';
 							endwhile; endif;
 							?>

@@ -1,3 +1,5 @@
+(function( $ ) {
+
 /*
   Watch for media query change when mobile menu is open and user resizes
   the browser from md to lg we hide the mobile menu.
@@ -18,9 +20,6 @@ function handleMediaChange(mediaQueryList) {
 
 /*
   Bootstrap modals that display content through the WP REST API
-  Since author of this theme is a total REST API noob, the previous/next
-  navigation should probably be solved more eloquently.
-  Right now it's a hack.
 */
 function initModals(){
   $(".nm-modal-opener").on("click", function(e){
@@ -105,8 +104,13 @@ function initOwlCarousel(){
 }
 
 function getModalContent(type, id, index) {
-  // var postUrl = "http://localhost/nm18/wp-json/wp/v2/"+type+"/"+id;
-  var postUrl = "http://noormeister.ee/wp-json/wp/v2/"+type+"/"+id;
+  var postUrl;
+  if(location.host.indexOf("localhost") >= 0){
+    postUrl = "http://localhost/nm18/wp-json/wp/v2/"+type+"/"+id;
+  } else {
+    postUrl = "http://noormeister.ee/wp-json/wp/v2/"+type+"/"+id;
+  }
+  
   $.ajax( {
     url: postUrl,
     //contentType: "application/json;charset=utf-8",
@@ -120,20 +124,21 @@ function getModalContent(type, id, index) {
       //console.log(restData);
       $('.nm-modal__btnPrev').prop("disabled", false);
       $('.nm-modal__btnNext').prop("disabled", false);
-      /*
-      if(index > 0){
-        $('.nm-modal__btnPrev').prop("disabled", false);
-        $('.nm-modal__btnPrev').css({"visibility":"visible"});
-      } else {
-        $('.nm-modal__btnPrev').css({"visibility":"hidden"});
-      }
-      if(  ){
-        $('.nm-modal__btnNext').prop("disabled", false);
-        $('.nm-modal__btnNext').css({"visibility":"visible"});
-      } else {
-        $('.nm-modal__btnNext').css({"visibility":"hidden"});
-      }
+      
+
+      /* 
+        This is ugly, but
+        if we have a gallery then reinit Responsive gallery grid plugin
       */
+      if(restData.content.rendered.indexOf("rgg-imagegrid") >= 0){
+        setTimeout(function(){
+          window.$grids = jQuery('.rgg-imagegrid');
+          jQuery(window).trigger("resize");
+          console.log(window.$grids);
+        },500);
+        
+      }
+
     },
     cache: true
   } );
@@ -163,7 +168,7 @@ $(document).ready(function() {
   initScrollButtons();
 });
 
-
+})( jQuery );
 
 
 

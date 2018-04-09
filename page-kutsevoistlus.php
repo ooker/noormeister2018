@@ -39,7 +39,7 @@ Template Post Type: page, kutsevoistlus
 
 			</section>
 		</div><!-- /.container -->
-
+		<?php include_once( dirname(__FILE__) . '/inc/gallery-loader.php'); ?>
 
 		
 <?php get_footer() ?>

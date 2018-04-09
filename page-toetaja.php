@@ -11,22 +11,22 @@ Template Post Type: page, toetaja
 		<div class="container nm-pageContent">
 			<section class="row" role="main">
 				<div class="col-sm-12">
-
+		
           <?php while ( have_posts() ) : the_post(); ?>
 					<div id="post-<?php echo the_id()?>">
 						<h1 class="nm-title"><?php the_title() ?></h1>
 						<?php include_once( dirname(__FILE__) . '/inc/social.php'); ?>
 						<div class="entry-content">
 							<?php the_content() ?>
-						</div><!-- .entry-content -->
+						</div>
 					</div>
 					<?php endwhile; ?>
 
-
+				
 					<h3>Suursponsorid:</h3>
 
 					<div class="nm-supporters">
-        	<?php
+        	<?php 
 						$args = array(
 							'posts_per_page' => -1,
 							'post_type' => 'toetaja',
@@ -42,15 +42,16 @@ Template Post Type: page, toetaja
                 echo '<div class="nm-supporter__text">' . get_the_title() . '</div>';
               echo '</a>';
             endwhile;
-
+			
             ?>
 
 					</div>
-
+			
+			
 					<h3>Sponsorid:</h3>
 
 					<div class="nm-supporters">
-        	<?php
+        	<?php 
 						$args = array(
 							'posts_per_page' => -1,
 							'post_type' => 'toetaja',
@@ -66,11 +67,11 @@ Template Post Type: page, toetaja
                 echo '<div class="nm-supporter__text">' . get_the_title() . '</div>';
               echo '</a>';
             endwhile;
-
+			
             ?>
 
 					</div>
-
+			
 					<h3>Koostööpartnerid:</h3>
 
 					<div class="nm-supporters">
