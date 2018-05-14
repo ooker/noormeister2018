@@ -213,10 +213,12 @@
 
 			<div class="nm-fpIntro__texts">
 				<div class="nm-fpIntro__when">
-					<h2>3.-4. mail Tallinnas</h2>
+					<h2><span style="font-size:90%;">Selleks aastaks on oskuste festival „Noor meister 2018“ lõppenud.</span></h2>
+					<h3>Aitäh kõikidele, kes kohale tulid!</h3>
+					<!-- <h2>3.-4. mail Tallinnas</h2>
 					<h4>Eesti Näituste messikeskuses</h4>
-					<h3>SISSEPÄÄS TASUTA!</h3>
-					<a href="#nm-fpInfo" class="nm-scrollBtn btn btn-primary btn-lg nm-fpIntro__btn">Mis toimub?</a>
+					<h3>SISSEPÄÄS TASUTA!</h3> -->
+					<a href="#nm-fpInfo" class="nm-scrollBtn btn btn-primary btn-lg nm-fpIntro__btn">Mis toimus?</a>
 				</div>
 
 				<hr style="width: 100%"/>
