@@ -163,7 +163,7 @@ h1, h2, h3, h4, h5 {
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0);
     transition: background-color 2s ease; }
     .menu-header-menu-container ul a:hover {
       background-color: #13446c;
@@ -233,8 +233,7 @@ h1, h2, h3, h4, h5 {
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden; }
     .nm-fpIntro .nm-fpIntro__logo img {
-      -webkit-filter: drop-shadow(0 4px 0 rgba(0, 0, 0, 0.25));
-              filter: drop-shadow(0 4px 0 rgba(0, 0, 0, 0.25));
+      filter: drop-shadow(0 4px 0 rgba(0, 0, 0, 0.25));
       -webkit-backface-visibility: hidden;
               backface-visibility: hidden; }
   .nm-fpIntro .nm-fpIntro__texts h2 {
@@ -634,7 +633,7 @@ footer {
 .nm-social__icon {
   -ms-flex: 0 1 25%;
       flex: 0 1 25%;
-  border-bottom: 2px transparent solid;
+  border-bottom: 2px rgba(0, 0, 0, 0) solid;
   transition: border-bottom 0.3s ease; }
   .nm-social__icon img {
     -ms-transform: translateY(0);

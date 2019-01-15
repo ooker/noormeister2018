@@ -81,6 +81,7 @@ add_action('init', 'register_scripts');
 
 register_sidebar(array(
   'name' => 'Uudiste arhiiv',
+  'id' => 'sidebar-1',
   'before_widget' => '<div>',
   'after_widget' => '</div>',
   'before_title' => '<h5>',
