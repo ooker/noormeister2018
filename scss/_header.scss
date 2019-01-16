@@ -285,12 +285,12 @@
 
   .nm-fpIntro__ev100 {
     display: block;
-    width: auto;
-    height: 80px;
+    width: 100%;
+    height: auto;
     img {
       // display: block;
-      height: 100%;
-      width: auto;
+      height: auto;
+      width: 100%;
     }
   }
 
@@ -336,7 +336,7 @@
 */
 
 .nm-fpInfo {
-  background: $nm-blue--semidark;
+  background: $nm-blue--dark;
   padding: 12vh 0;
   
 }
@@ -416,10 +416,10 @@
       //animation: moveOrigin infinite 6s;
 
       img {
-        width: 90%;
+        width: 85%;
         max-width: 43vw;
         opacity: 0;
-        margin-top: -7vh;
+        margin-top: -12vh;
         -webkit-transform: scale(1.0) scaleZ(1.0) rotateX(0deg);
         -webkit-transform-origin: 50% 50%;
         -webkit-perspective-origin: 50% 50%;
@@ -484,14 +484,14 @@
     }
 
     .nm-fpIntro__ev100 {
-      width: auto;
-      height: 14vh;
-      min-height: 100px;
-      max-height: 260px;
+      width: 100%;
+      height: auto;
+      min-width: 120px;
+      max-width: 250px;
       img {
         display: block;
-        height: 100%;
-        width: auto;
+        width: 100%;
+        height: auto;
       }
     }
 

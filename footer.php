@@ -1,26 +1,24 @@
 		</section><!-- /.nm-mainContent-->
 
 		<!-- Sponsorite logod -->
-		<section class="container-fluid nm-footer__logobar">
+		<!-- <section class="container-fluid nm-footer__logobar">
 
 			<div id="carousel_container" class="owl-carousel" >
 				<?php
 
-				//$args = array( 'post_type' => 'toetaja', 'posts_per_page' => -1 );
-				$args = array(
-					'posts_per_page' => -1, 
-					'post_type' => 'toetaja',
-					// 'category_name' => 'toetaja-koostoopartner',
-					'orderby' => 'title',
-					'order' => 'ASC'
-				);
-				$loop = new WP_Query( $args );
-				while ( $loop->have_posts() ) : $loop->the_post();
-					echo '<img class="item" src="' . get_the_post_thumbnail_url() . '" alt="'. get_the_title() .'">';
-				endwhile;
+				// $args = array(
+				// 	'posts_per_page' => -1, 
+				// 	'post_type' => 'toetaja',
+				// 	'orderby' => 'title',
+				// 	'order' => 'ASC'
+				// );
+				// $loop = new WP_Query( $args );
+				// while ( $loop->have_posts() ) : $loop->the_post();
+				// 	echo '<img class="item" src="' . get_the_post_thumbnail_url() . '" alt="'. get_the_title() .'">';
+				// endwhile;
 				?>
 			</div>
-		</section>
+		</section> -->
 
 
 		<!-- FOOTER -->

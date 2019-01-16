@@ -26,13 +26,13 @@
 			xmlns:nmdata="http://www.noormeister.ee" style="width:100%; height: 100vh;">
 				
 				
-				<!-- <defs>
+				 <!-- <defs>
 					<pattern id="Pattern-1" height="0.1" width="0.056" 
 					
 					patternContentUnits="objectBoundingBox" 
          			viewBox="0 0 56 100" 
 					preserveAspectRatio="xMinYMin slice" 
-					style="transform:rotate(-30deg) scaleX(0.6)">
+					style="transform:rotate(-30deg) scaleX(1)">
 						<rect width='56' height='100' fill='hsl(207, 100%, 40%)'/>
 						<path d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100' fill='none' stroke='hsla(0, 0%, 100%, 0.06)' stroke-width='4'/>
 						<path d='M28 0L28 34L0 50L0 84L28 100L56 84L56 50L28 34' fill='none' stroke='hsla(0, 0%, 100%, 0.04)' stroke-width='2'/>
@@ -51,7 +51,7 @@
 				</defs> -->
 
 					<?php if ( is_front_page() ): ?>
-						<path d="M0,0 H100 V100 H0"  style="fill:hsl(207, 100%, 40%)"></path>
+						<path d="M0,0 H100 V100 H0"  style="fill:hsl(47, 100%, 90%)"></path>
 						<!-- <path d="M0,0 H100 V100 H0" fill="url(#Pattern-1)" ></path> -->
 
 						<path nmdata:axis="y" 
@@ -63,7 +63,7 @@
 							nmdata:p2shift="0" 
 							class="nm-svgBg" 
 							d="" 
-							style="fill:hsla(207, 100%, 50%, 1);"></path>
+							style="fill:hsl(335, 94%, 43%);"></path>
 						<path nmdata:axis="y" 
 							nmdata:startpos="100" 
 							nmdata:duration="140" 
@@ -73,31 +73,11 @@
 							nmdata:p2shift="-15" 
 							class="nm-svgBg" 
 							d="" 
-							style="fill:hsla(207, 100%, 30%, 1);"
+							style="fill:hsl(286, 16%, 30%);"
 							></path>
 
 					<?php elseif( is_page('kava') ): ?>
-						<!-- <path class="nm-svgBg" d="" style="fill:hsla(207, 100%, 60%, 1);"
-							nmdata:axis="x" nmdata:startpos="100" nmdata:duration="150" nmdata:p1end="87" nmdata:p2end="80"></path>
-						<path class="nm-svgBg" d="" fill="url(#Pattern-1)"
-							nmdata:axis="y" 
-							nmdata:startpos="100" 
-							nmdata:duration="150" 
-							nmdata:p1end="80" 
-							nmdata:p2end="86"
-							nmdata:p1shift="0"
-							nmdata:p2shift="-5" 
-						></path> -->
 						
-						<!-- <path class="nm-svgBg" d="" style="fill:hsl(0, 0%, 92%);"
-						nmdata:axis="y" 
-							nmdata:startpos="0" 
-							nmdata:duration="150" 
-							nmdata:p1end="35" 
-							nmdata:p2end="27"
-							nmdata:p1shift="0"
-							nmdata:p2shift="0" 
-						></path> -->
 						<path class="nm-svgBg" d="" style="fill:hsl(0, 0%, 90%);"
 							nmdata:axis="x" nmdata:startpos="100" nmdata:duration="120" nmdata:p1end="86" nmdata:p2end="79"></path>
 						<path class="nm-svgBg" d="" style="fill:hsl(207, 100%, 40%);"
@@ -208,17 +188,16 @@
 		<section class="nm-fpIntro">
 
 			<div class="nm-fpIntro__logo">
-				<img src="<?php echo get_template_directory_uri(); ?>/images/nm-logo-2018_neg.svg" alt="Noor Meister 2018 - oskuste festival" />
+				<img src="<?php echo get_template_directory_uri(); ?>/images/logo/nm-19__logo.svg" alt="Noor Meister 2019" />
 			</div>
 
 			<div class="nm-fpIntro__texts">
 				<div class="nm-fpIntro__when">
-					<h2><span style="font-size:90%;">Selleks aastaks on oskuste festival „Noor meister 2018“ lõppenud.</span></h2>
-					<h3>Aitäh kõikidele, kes kohale tulid!</h3>
+					<h2>Oskuste festival „Noor meister 2019“ juba 3.-4. mail Tallinnas</h2>
 					<!-- <h2>3.-4. mail Tallinnas</h2>
 					<h4>Eesti Näituste messikeskuses</h4>
 					<h3>SISSEPÄÄS TASUTA!</h3> -->
-					<a href="#nm-fpInfo" class="nm-scrollBtn btn btn-primary btn-lg nm-fpIntro__btn">Mis toimus?</a>
+					<!-- <a href="#nm-fpInfo" class="nm-scrollBtn btn btn-primary btn-lg nm-fpIntro__btn">Mis toimus?</a> -->
 				</div>
 
 				<hr style="width: 100%"/>
@@ -232,7 +211,7 @@
 
 					<div class="nm-fpIntro__ev100">
 						<img 
-							src="<?php echo get_template_directory_uri(); ?>/images/logo/ev100_logo_white.svg" />
+							src="<?php echo get_template_directory_uri(); ?>/images/logo/innove_kutseharidus_logo-white.svg" />
 					</div>
 					
 				</div>
@@ -248,20 +227,20 @@
 					<div class="col-sm-12 col-md-4 nm-fpInfo__block">
 						<img src="<?php echo get_template_directory_uri(); ?>/images/elements/icons/material-grain.svg" alt="">
 						<h4>KUTSE&shy;MEISTRI&shy;VÕISTLUSED</h4>
-						<h5>Eesti kutsemeistrivõistlused 31&nbsp;erialal ligi 300&nbsp;võistlejaga</h5>
-						<a href="<?php echo get_site_url(); ?>/kutsevoistlused" class="btn btn-primary nm-fpInfo__btn">VAATA</a>
+						<!-- <h5>Eesti kutsemeistrivõistlused 31&nbsp;erialal ligi 300&nbsp;võistlejaga</h5>
+						<a href="<?php //echo get_site_url(); ?>/kutsevoistlused" class="btn btn-primary nm-fpInfo__btn">VAATA</a> -->
 					</div>
 					<div class="col-sm-12 col-md-4 nm-fpInfo__block">
 						<img src="<?php echo get_template_directory_uri(); ?>/images/elements/icons/material-blur.svg" alt="">
 						<h4>OSKUSTE FESTIVAL</h4>
-						<h5>Põnevad töötoad, õpilasfirmad ja edukad praktikud</h5>
-						<a href="<?php echo get_site_url(); ?>/oskuste-festival" class="btn btn-primary nm-fpInfo__btn">VAATA</a>
+						<!-- <h5>Põnevad töötoad, õpilasfirmad ja edukad praktikud</h5>
+						<a href="<?php //echo get_site_url(); ?>/oskuste-festival" class="btn btn-primary nm-fpInfo__btn">VAATA</a> -->
 					</div>
 					<div class="col-sm-12 col-md-4 nm-fpInfo__block">
 						<img src="<?php echo get_template_directory_uri(); ?>/images/elements/icons/material-star-border.svg" alt="">
 						<h4>LAVAPROGRAMM</h4>
-						<h5>Kahepäevane meeleolukas lavaprogramm</h5>
-						<a href="<?php echo get_site_url(); ?>/kava" class="btn btn-primary nm-fpInfo__btn">TUTVU</a>
+						<!-- <h5>Kahepäevane meeleolukas lavaprogramm</h5>
+						<a href="<?php //echo get_site_url(); ?>/kava" class="btn btn-primary nm-fpInfo__btn">TUTVU</a> -->
 					</div>
 				</div>
 				<!-- <div class="row">
