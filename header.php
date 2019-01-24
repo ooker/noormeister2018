@@ -51,89 +51,43 @@
 				</defs> -->
 
 					<?php if ( is_front_page() ): ?>
-						<path d="M0,0 H100 V100 H0"  style="fill:hsl(47, 100%, 90%)"></path>
+						<!-- <path d="M0,0 H100 V100 H0"  style="fill:hsl(47, 100%, 90%)"></path> -->
 						<!-- <path d="M0,0 H100 V100 H0" fill="url(#Pattern-1)" ></path> -->
 
 						<path nmdata:axis="y" 
 							nmdata:startpos="0" 
 							nmdata:duration="160" 
-							nmdata:p1end="30" 
-							nmdata:p2end="20"
+							nmdata:p1end="24" 
+							nmdata:p2end="17"
 							nmdata:p1shift="0"
 							nmdata:p2shift="0" 
 							class="nm-svgBg" 
 							d="" 
-							style="fill:hsl(335, 94%, 43%);"></path>
+							style="fill:hsl(335, 100%, 36%);"></path>
 						<path nmdata:axis="y" 
 							nmdata:startpos="100" 
 							nmdata:duration="140" 
 							nmdata:p1end="88" 
-							nmdata:p2end="80"
+							nmdata:p2end="83"
 							nmdata:p1shift="0"
 							nmdata:p2shift="-15" 
 							class="nm-svgBg" 
 							d="" 
-							style="fill:hsl(286, 16%, 30%);"
+							style="fill:hsl(235, 100%, 80%);"
 							></path>
 
-					<?php elseif( is_page('kava') ): ?>
-						
-						<path class="nm-svgBg" d="" style="fill:hsl(0, 0%, 90%);"
-							nmdata:axis="x" nmdata:startpos="100" nmdata:duration="120" nmdata:p1end="86" nmdata:p2end="79"></path>
-						<path class="nm-svgBg" d="" style="fill:hsl(207, 100%, 40%);"
-							nmdata:axis="y" 
-							nmdata:startpos="100" 
-							nmdata:duration="200" 
-							nmdata:p1end="90" 
-							nmdata:p2end="86"
-							nmdata:p1shift="0"
-							nmdata:p2shift="-15" 
-						></path>
-						
-						<!-- <circle cx="20" cy="20" r="16" style="fill:hsl(46, 100%, 69%);"></circle> -->
-					<?php elseif( is_page('kuidas-tulla') ): ?>
-						<path class="nm-svgBg" d="" style="fill:hsla(0, 0%, 90%, 1);"
-							nmdata:axis="x" nmdata:startpos="100" nmdata:duration="150" nmdata:p1end="70" nmdata:p2end="50"
-						></path>
-
-					<?php elseif( is_page('kutsevoistlused') ): ?>
-						<path class="nm-svgBg" d="" style="fill:hsla(207, 100%, 40%, 1);"
-							nmdata:axis="x" nmdata:startpos="100" nmdata:duration="250" nmdata:p1end="90" nmdata:p2end="75"
-						></path>
-						<path class="nm-svgBg" d="" style="fill:hsla(207, 100%, 33%, 1);"
-							nmdata:axis="y" 
-							nmdata:startpos="100" 
-							nmdata:duration="150" 
-							nmdata:p1end="90" 
-							nmdata:p2end="70"
-							nmdata:p1shift="0"
-							nmdata:p2shift="0" 
-						></path>
-
-					<?php elseif( is_page('oskuste-festival') ): ?>
-						<path class="nm-svgBg" d="" style="fill:hsl(0, 0%, 92%);"
-							nmdata:axis="x" nmdata:startpos="100" nmdata:duration="150" nmdata:p1end="80" nmdata:p2end="70"
-						></path>
-						<path class="nm-svgBg" d="" style="fill:hsl(207, 100%, 40%);"
-							nmdata:axis="y" 
-							nmdata:startpos="100" 
-							nmdata:duration="300" 
-							nmdata:p1end="88" 
-							nmdata:p2end="80"
-							nmdata:p1shift="0"
-							nmdata:p2shift="0" 
-						></path>
+					
 
 					<?php else: ?>
-						<path class="nm-svgBg" d="" style="fill:hsla(0, 0%, 88%, 1);"
-							nmdata:axis="x" nmdata:startpos="100" nmdata:duration="100" nmdata:p1end="80" nmdata:p2end="70"
+						<path class="nm-svgBg" d="" style="fill:hsl(218, 23%, 56%);"
+							nmdata:axis="x" nmdata:startpos="100" nmdata:duration="100" nmdata:p1end="85" nmdata:p2end="75"
 						></path>
-						<path class="nm-svgBg" d="" style="fill:hsla(207, 100%, 40%, 1);"
+						<path class="nm-svgBg" d="" style="fill:hsl(335, 100%, 36%);"
 							nmdata:axis="y" 
 							nmdata:startpos="100" 
 							nmdata:duration="180" 
 							nmdata:p1end="96" 
-							nmdata:p2end="70"
+							nmdata:p2end="90"
 							nmdata:p1shift="0"
 							nmdata:p2shift="0" 
 						></path>
@@ -147,12 +101,12 @@
 		<header class="container-fluid nm-headerTop" <?php if(is_front_page()) echo 'style="padding-top:0;"'; ?> >
 			<div class="container">
 				<div class="row nm-headerTop__logo align-items-center" <?php if(is_front_page()) echo 'style="display:none;"'; ?> >
-					<div class="col-6 col-sm-4 col-lg-2">
+					<div class="col-4 col-sm-4 col-lg-2">
 						<a href="<?php echo home_url(); ?>">
-							<img class="nm-headerTop__logo__img" src="<?php echo get_template_directory_uri(); ?>/images/nm-logo-17_neg_alternative.svg" alt="Noor Meister 2018" />
+							<img class="nm-headerTop__logo__img" src="<?php echo get_template_directory_uri(); ?>/images/logo/nm-19__logo.svg" alt="Noor Meister 2018" />
 						</a>
 					</div>
-					<div class="col-6 col-sm-8 col-lg-10">
+					<div class="col-8 col-sm-8 col-lg-10">
 						<h4 class="nm-headerTop__date">3.-4. mail Tallinnas</h4>
 					</div>
 				</div>
@@ -209,9 +163,9 @@
 							src="<?php echo get_template_directory_uri(); ?>/images/logo/esf_logo.svg" />
 					</div>
 
-					<div class="nm-fpIntro__ev100">
+					<div class="nm-fpIntro__innove">
 						<img 
-							src="<?php echo get_template_directory_uri(); ?>/images/logo/innove_kutseharidus_logo-white.svg" />
+							src="<?php echo get_template_directory_uri(); ?>/images/logo/innove_kutseharidus_logo-mono.svg" />
 					</div>
 					
 				</div>

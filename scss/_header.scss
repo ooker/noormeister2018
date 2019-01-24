@@ -10,12 +10,13 @@
   .nm-headerTop__logo {
     //justify-content: center;
     .nm-headerTop__logo__img {
-      width: 90%;
+      width: 75%;
+      max-width: 100px;
     }
     .nm-headerTop__date {
       margin: 0;
       line-height: 1;
-      color:$nm-yellow;
+      color:$nm-beige;
       font-family: $nm-font--stencil;
       font-weight: 400;
       text-align: right;
@@ -64,34 +65,18 @@
 
   }
   .current-menu-item {
-    transform: rotate(3deg) translateY(10px);
+    transform: rotate(2deg) translateY(10px);
 
     a {
-      border: 6px solid #ebebeb;
+      border: 6px solid $nm-beige;
       //border-bottom: 8px solid $nm-green;
-      background: #ebebeb !important;
+      background:$nm-beige !important;
       font-weight: bold;
       color: $nm-blackish;
     }
   }
 }
 
-@media screen and (min-width: 992px) {
-  .nm-headerTop {
-    min-height: 7vh;
-    .container {
-      min-width: 0;
-    }
-    .nm-headerTop__logo {
-      .nm-headerTop__date {
-        font-size: 2.6vw;
-      }
-    }
-    .nm-headerTop__nav {
-      display: flex;
-    }
-  }
-}
 
 @media screen and (min-width: 1500px) {
   .nm-headerTop {
@@ -141,8 +126,8 @@
   align-items: center;
   width: 70px;
   height: 70px;
-  background: $nm-orange;
-  border: 5px solid darken($nm-orange, 10%);
+  background: $nm-rubin;
+  border: 5px solid darken($nm-rubin, 10%);
   border-radius: 50%;
   box-shadow: 0 2px 2px 1px rgba(0,0,0,0.4);
   z-index: 99999;
@@ -150,8 +135,8 @@
   transition: all 0.5s ease;
 
   &:hover {
-    background: darken($nm-orange, 10%);
-    border: 5px solid lighten($nm-orange, 5%);
+    background: darken($nm-rubin, 10%);
+    border: 5px solid lighten($nm-rubin, 5%);
     box-shadow: 0 4px 4px 2px rgba(0,0,0,0.4);
   }
 
@@ -163,12 +148,19 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* ---------------------------------------------------------------------------
   pageBg - animated SVG background
 --------------------------------------------------------------------------- */
-
-
-
 
 .nm-pageBg {
   backface-visibility: hidden;
@@ -206,20 +198,18 @@
   justify-content: center;
   align-items: center;
   padding: 100px 4vw 10vh 4vw ;
-  background: $nm-blue;
+  // background-color: $nm-beige;
+  // background-image: repeating-linear-gradient(-45deg, transparent, transparent 6px, darken($nm-beige, 5%) 6px, darken($nm-beige, 5%) 12px);
   text-align: center;
-  //height:92vh;
 
   overflow: hidden;
 
 
   .nm-fpIntro__logo {
-    //position: absolute;
     width: 60vw;
     margin: 0 auto 8vh auto;
-    //transform: rotate(-5deg) translate3d(0.0,0.0,0.0);
+    // transform: rotate(-2deg) translate3d(0.0,0.0,0.0);
     backface-visibility: hidden;
-    // opacity: 0.8;
     img {
       filter: drop-shadow( 0 4px 0 hsla(0, 0%, 0%, 0.25) );
       backface-visibility: hidden;
@@ -227,11 +217,12 @@
   }
   .nm-fpIntro__texts {
     h2 {
-      color: $nm-yellow;
+      color: $nm-blue--dark;
       font-family: $nm-font--stencil;
       font-weight: 400;
-      font-size: 3rem;
-      text-shadow: 0 3px 0 hsla(0, 0%, 0%, 0.25);
+      font-size: 2rem;
+      line-height: 1.3;
+      //text-shadow: 0 3px 0 hsla(0, 0%, 0%, 0.25);
     }
     h3 {
       color: #fff;
@@ -251,13 +242,13 @@
   .nm-fpIntro__when {
     transform: rotate(2deg);
     h2 {
-      color: $nm-yellow;
+      color: $nm-blue--dark;
     }
   }
   
   hr {
     margin: 4vh auto;
-    border-top: 5px solid rgba(255,255,255,0.6);
+    border-top: 5px solid $nm-rubin;
     transform: rotate(-1deg);
     &:last-of-type {
       transform: rotate(1deg);
@@ -266,14 +257,17 @@
 
   .nm-fpIntro__logos {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding-top: 4vh;
   }
 
   .nm-fpIntro__esf {
     display: block;
-    width: auto;
-    height: 80px;
+    
+    width: 100%;
+    height: auto;
+    max-width: 164px;
+    padding-right:2vw;
     .nm-fpIntro__esf--hor {
       height: 100%;
       width: auto;
@@ -283,19 +277,20 @@
     
   }
 
-  .nm-fpIntro__ev100 {
-    display: block;
+  .nm-fpIntro__innove {
+    display: flex;
+    justify-content: center;
+    align-items:center;
     width: 100%;
     height: auto;
+    max-width: 164px;
+    padding-left:2vw;
     img {
       // display: block;
       height: auto;
       width: 100%;
     }
   }
-
-
-
 
 }
 
@@ -336,7 +331,7 @@
 */
 
 .nm-fpInfo {
-  background: $nm-blue--dark;
+  background: $nm-blue;
   padding: 12vh 0;
   
 }
@@ -356,11 +351,11 @@
   }
   h4 {
     font-weight: 400;
-    color: $nm-yellow;
+    color: $nm-blue--dark; 
   }
   h5 {
     font-weight: 400;
-    color: $nm-blue--lighter;
+    color: $nm-blue--dark; 
   }
 }
 
@@ -374,149 +369,6 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (min-width: 992px) {
-  .nm-navSwapper {
-    display: none;
-  }
-
-  .nm-fpIntro {
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: space-between;
-    min-height: 94vh;
-    flex-wrap: wrap;
-    background: transparent;
-
-    .nm-fpIntro__logo {
-      flex: 1 0 60%;
-      display: flex;
-      align-items: center;
-      opacity: 1;
-      margin: 0;
-      padding-top:0;
-      transform: rotate(-3deg);
-      transform-style: preserve-3d;
-      perspective: 500px;
-      //animation: moveOrigin infinite 6s;
-
-      img {
-        width: 85%;
-        max-width: 43vw;
-        opacity: 0;
-        margin-top: -12vh;
-        -webkit-transform: scale(1.0) scaleZ(1.0) rotateX(0deg);
-        -webkit-transform-origin: 50% 50%;
-        -webkit-perspective-origin: 50% 50%;
-        -moz-transform: rotateX(0deg);
-        -moz-transform-origin: 50% 50%;
-        -moz-perspective-origin: 50% 50%;
-        -ms-transform: rotateX(0deg);
-        -ms-transform-origin: 5% 50%;
-        -ms-perspective-origin: 50% 50%;
-
-        transform: scale(1.0) scaleZ(1.0) rotateX(30deg) translate3d(0.0,0.0,0.0);
-        transform-origin: 50% 50%;
-        perspective-origin: 50% 50%;
-        animation: logoIn 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) forwards;
-        animation-delay: 1s;
-        //margin: -8vh 0 0 -4vw;
-      }
-    }
-
-    .nm-fpIntro__texts {
-      flex: 1 0 40%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-    }
-
-    .nm-fpIntro__when {
-      transform: rotate(1.5deg);
-      text-align: left;
-      opacity: 0;
-      animation: whenIn 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) forwards;
-      animation-delay: 2s;
-    }
-    .nm-fpIntro__logos {
-      padding-top: 0;
-      justify-content: flex-start;
-      opacity: 0;
-      animation: whatIn 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) forwards;
-      animation-delay: 2.7s;
-    }
-    
-
-    .nm-fpIntro__esf {
-
-      width: auto;
-      height: 14vh;
-      min-height: 100px;
-      max-height: 260px;
-      margin-right: 5vw;
-
-      .nm-fpIntro__esf--ver {
-        display:none;
-      }
-      .nm-fpIntro__esf--hor {
-        display: block;
-        height: 100%;
-        width: auto;
-        // max-height: 180px;
-        border:5px solid white;
-        // box-shadow: 0 -2px 3px 1px rgba(0,0,0,0.3);
-      }
-    }
-
-    .nm-fpIntro__ev100 {
-      width: 100%;
-      height: auto;
-      min-width: 120px;
-      max-width: 250px;
-      img {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-    }
-
-    hr {
-      display: none;
-    }
-
-  }
-
-  .nm-fpIntro__btn {
-      // font-family: $nm-font--stencil;
-      flex: 0;
-      transform: rotate(0deg);
-      transition: all 0.5s ease;
-      margin-top: 4vh;
-      
-      &:hover {
-        color: $nm-white;
-        box-shadow: 0 4px 0 0 hsla(0, 0%, 0%, 0.15);
-        background-color: lighten($nm-blue--dark, 10%); 
-      }
-    }
-
-
-}
 
 
 /*

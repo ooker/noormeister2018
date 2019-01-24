@@ -5,7 +5,9 @@ body {
   position: relative;
   font-size: 18px;
   margin: 0; padding: 0;
-  background: #fff;
+  background: $nm-beige;
+  background-color: $nm-beige;
+  background-image: repeating-linear-gradient(-45deg, transparent, transparent 10px, darken($nm-beige, 5%) 10px, darken($nm-beige, 5%) 14px);
   font-family: "Lato", sans-serif;
 }
 
@@ -36,21 +38,21 @@ h1, h2, h3, h4, h5 {
   margin-left: -2vw;
   width: 100%;
 
-  &:before {
-    content : "";
-    position: absolute;
-    display: block;
-    //margin-right: 10px;
-    width: 60vw;
-    top: 0rem;
-    left:-2vw;
-    height: 3.5rem;
-    z-index: -500;
-    transform: rotate(0.5deg) scaleY(0);
-    margin-left: -5vw;
-    background: $nm-yellow;
-    animation: titleIn 1s ease-in-out forwards;
-  }
+  // &:before {
+  //   content : "";
+  //   position: absolute;
+  //   display: block;
+  //   //margin-right: 10px;
+  //   width: 60vw;
+  //   top: 0rem;
+  //   left:-2vw;
+  //   height: 3.5rem;
+  //   z-index: -500;
+  //   transform: rotate(0.5deg) scaleY(0);
+  //   margin-left: -5vw;
+  //   background: $nm-blue--light;
+  //   animation: titleIn 1s ease-in-out forwards;
+  // }
 
 }
 
@@ -63,14 +65,17 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+
 @import "components";
 @import "header";
+@import "header__min-576";
+@import "header__min-992";
 @import "footer";
 @import "modal";
 @import "social";
 
 @import "page-news";
-@import "entry";
+@import "entry"; 
 
 @import "page-supporters";
 
@@ -91,7 +96,7 @@ h1, h2, h3, h4, h5 {
     height: 100%;
     //margin-left: -12px;
     //margin-right: 12px;
-    background: $nm-yellow;
+    background: $nm-rubin;
     margin: 6px 0;
     vertical-align: baseline;
     //border: 9px solid $nm-yellow;
@@ -111,3 +116,4 @@ h1, h2, h3, h4, h5 {
     font-size: 3rem;
   }
 }
+
